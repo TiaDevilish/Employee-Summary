@@ -32,8 +32,10 @@ function theManager(){
             message: "What is your managers office number?",
             name: "officeNumber"
         }
-    ]
-    console.log(questions);
+    ];
+    inquirer.prompt(questions).then(function(response){
+        console.log(response);
+    })
 }
 
 theManager();
