@@ -10,6 +10,46 @@ const render = require("./lib/htmlRenderer");
 
 //call render get all ppl info/promts. pass it to render,after that i get a list and write a file
 
+function theManager(){
+    const questions = [
+        {
+            type: "input",
+            message: "What is your managers name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your managers id?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your managers email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "What is your managers office number?",
+            name: "officeNumber"
+        }
+    ]
+    console.log(questions);
+}
+
+theManager();
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
