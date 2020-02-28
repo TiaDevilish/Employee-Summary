@@ -35,7 +35,9 @@ function theManager(){
     ];
     inquirer.prompt(questions).then(function(response){
         console.log(response);
-    })
+        const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+        
+    });
 }
 
 theManager();
