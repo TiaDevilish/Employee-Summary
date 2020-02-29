@@ -126,8 +126,9 @@ function theIntern(){
     })
 }
 
-theManager();
 
+
+theManager();
 
 
 
