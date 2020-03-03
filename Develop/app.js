@@ -126,20 +126,26 @@ function theIntern(){
     })
 }
 
-function createHtml(){
-    fs.writeFileSync(outputPath, render(teamMembers), "utf-8")
-}
+// function createHtml(){
+//     fs.writeFileSync(outputPath, render(teamMembers), "utf-8")
+// }
 
-createHtml(); 
+// createHtml(); 
+
+const indexHTML = fs.appendFileSync("templates/main.html");
+    teamHTML = eval('`'+ indexHTML +'`');
+    fs.writeFile("output/team.html", teamHTML, function(err) {
+    if (err){
+        return console.log(err);
+    }
+    });
+
+
 theManager();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-
-
-
-
 
 
 
